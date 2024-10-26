@@ -13,7 +13,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - sgps_db:/var/lib/postgresql/data
+      - tasks_service_db:/var/lib/postgresql/data
 
   adminer:
     image: adminer
@@ -22,4 +22,4 @@ services:
       - 8082:8080
     
 volumes:
-  sgps_db:
+  tasks_service_db:

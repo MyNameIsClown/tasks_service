@@ -1,20 +1,18 @@
 from django.db import models
-
-class TaskStatus(models.Model):
+from modules.config.models import AuditModel
+from modules.boards.models import Board
+class TaskStatus(AuditModel):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
 
-class Task(models.Model):
+class Task(AuditModel):
     title = models.CharField(max_length=255)
     description = models.TextField()
     status = models.ForeignKey(TaskStatus, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    board = models.ForeignKey(Board, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

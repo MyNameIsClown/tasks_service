@@ -12,7 +12,11 @@ CORS_ALLOWED_ORIGINS = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'tasks_service',
+        'USER': 'tasks_service',
+        'PASSWORD': 'YSEYqLwwTPPAB4WHm1z4',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }

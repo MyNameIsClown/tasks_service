@@ -10,6 +10,8 @@ SECRET_KEY = 'django-insecure-&p==ban#b1x$8lfii@j3*3=i)chbqh$xt&&b^0#)f!ra^x245p
 # Application definition
 LOCAL_APPS = [
     'modules.tasks',
+    'modules.boards',
+    'modules.config',
 ]
 
 THIRD_PARTY_APPS = [
