@@ -8,5 +8,5 @@ class TaskFilter(FilterSet):
     
     class Meta:
         model = Task
-        fields = ['title', 'description', 'status']
+        fields = ['name', 'description', 'status']
 
