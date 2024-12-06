@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import DefaultStatus
-admin.site.register(DefaultStatus)
+from .models import Status
+
+admin.site.register(Status)
 
 

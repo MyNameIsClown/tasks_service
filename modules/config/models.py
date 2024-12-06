@@ -15,12 +15,11 @@ class AuditModel(models.Model):
         self.updated_at = timezone.now()
         super().save(*args, **kwargs)
 
-class DefaultStatus(AuditModel):
+class Status(AuditModel):
     """
-    Default Status for all boards
+    Default Status Model
     """
     name = models.CharField(max_length=255)
-    description = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name

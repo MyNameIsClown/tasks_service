@@ -10,7 +10,6 @@ class Board(AuditModel):
     
 class BoardStatus(AuditModel):
     name = models.CharField(max_length=255)
-    description = models.TextField(null=True, blank=True)
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
 
     def __str__(self):

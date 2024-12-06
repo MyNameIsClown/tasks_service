@@ -5,4 +5,4 @@ from ...models import BoardStatus
 class BoardStatusFilter(FilterSet):
     class Meta:
         model = BoardStatus
-        fields = ['name', 'description', 'board']
+        fields = ['name', 'board']
